@@ -1,4 +1,4 @@
-module goshell
+module github.com/GnezIew/goshell
 
 go 1.17
 
