@@ -52,7 +52,7 @@ func main() {
 		_, _ = red.Println(err)
 		return
 	}
-	req.Header.Add("Cookie", "_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE3MDMwMzgxMTksImV4cCI6MTcwMzY0MjkxOX0.rwcEfg3bHRwzfMapWiu3xi9Vm8EseI7qHBAkrzPSPsw; _yapi_uid=23")
+	req.Header.Add("Cookie", "_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE3MTA2NjY4NTEsImV4cCI6MTcxMTI3MTY1MX0.9MnOY5jGBREWI7bGC6yXpuJkpk_XJsKL0Kq0nM0h6FM; _yapi_uid=23")
 
 	res, err := client.Do(req)
 	if err != nil {

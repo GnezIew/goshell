@@ -1,0 +1,59 @@
+type (
+	AddAndEditBankReq { // 新增和编辑题库
+		QuestionBankId  string `json:"questionBankId,optional"` // 题库id 传空表示新增 有值表示编辑
+		QuestionBankName string `json:"questionBankName"` // 题库名称
+	}
+	AddAndEditBankResp {}
+
+	DeleteQuestionBankReq { // 删除题库
+		QuestionBankId  string `json:"questionBankId"` // 题库id 传空表示新增 有值表示编辑
+	}
+	DeleteQuestionBankResp {}
+
+	GetQuestionBankListReq { // 获取题库列表
+	}
+	GetQuestionBankListData {
+		QuestionBankId   string `json:"questionBankId"` // 题库id
+		QuestionBankName string `json:"questionBankName"` // 题库名称
+		QuestionProblemNumber int64  `json:"questionProblemNumber"` // 题目数量
+	}
+	GetQuestionBankListResp {
+		List []GetQuestionBankListData `json:"list"`
+	}
+
+	GetBankTypeListReq { // 获取题库话题和类别列表
+		QuestionBankId   string `json:"questionBankId"` // 题库id
+	}
+	GetBankTypeListData {
+		QuestionBankTypeId      string `json:"questionBankTypeId"` // 类别id
+		QuestionBankType        string `json:"questionBankType"`   // 题库类别： 1、话题 2、 类别
+		TypeName                string `json:"typeName"`    // 类别名称
+	}
+	GetBankTypeListResp {
+		TopicList       []GetBankTypeListData `json:"topicList"` // 话题列表
+		ClassesList     []GetBankTypeListData `json:"classesList"` // 类别列表
+	}
+)
+
+@server(
+	group : bank
+	jwt :Auth
+)
+service question-api {
+	@doc "新增和编辑题库"
+	@handler AddAndEditBank
+	post /question/bank/addAndEditBank (AddAndEditBankReq) returns (AddAndEditBankResp)
+
+	@doc "删除题库"
+	@handler DeleteQuestionBank
+	post /question/bank/deleteQuestionBank (DeleteQuestionBankReq) returns (DeleteQuestionBankResp)
+
+	@doc "获取题库列表"
+	@handler GetQuestionBankList
+	post /question/bank/getQuestionBankList (GetQuestionBankListReq) returns (GetQuestionBankListResp)
+
+	@doc "获取题库话题和类别列表"
+	@handler GetBankTypeList
+	post /question/bank/getBankTypeList (GetBankTypeListReq) returns (GetBankTypeListResp)
+
+}
