@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/GnezIew/goshell/tool/xstring"
 	"github.com/fatih/color"
 	"os"
 	"strings"
@@ -21,6 +20,7 @@ func main() {
 
 func readAndDelete(path string) {
 	fmt.Println(path)
+	blue := color.New(color.FgBlue)
 	// 打开文件
 	oldFileName := path
 	file, err := os.Open(path)
@@ -50,23 +50,27 @@ func readAndDelete(path string) {
 		newline := line
 		line = strings.TrimSpace(line) // 去除左右多余的空格
 		if !strings.HasPrefix(line, "service") {
-			if strings.Contains(line, "Req") {
+			if strings.Contains(line, "Req {") {
 				line = strings.TrimSpace(line)
 				line = strings.ReplaceAll(line, " ", "")
 				lineList := strings.Split(line, "Req")
 				serviceName := lineList[0]
-				cacheServiceMap[serviceName] = ""
-				serviceList = append(serviceList, serviceName)
-				if len(lineList) >= 2 && strings.Contains(lineList[1], "//") {
-					remarkList := strings.Split(lineList[1], "//")
-					if len(remarkList) >= 1 {
-						cacheServiceMap[serviceName] = remarkList[1]
+				if serviceName != "" {
+					cacheServiceMap[serviceName] = ""
+					serviceList = append(serviceList, serviceName)
+					if len(lineList) >= 2 && strings.Contains(lineList[1], "//") {
+						remarkList := strings.Split(lineList[1], "//")
+						if len(remarkList) >= 1 {
+							cacheServiceMap[serviceName] = remarkList[1]
+						}
 					}
 				}
 			} else if strings.Contains(line, "group") {
 				line = strings.ReplaceAll(line, " ", "")
-				lineList := strings.Split(line, "group:")
-				group = lineList[1]
+				if strings.Contains(line, "group:") {
+					lineList := strings.Split(line, "group:")
+					group = lineList[1]
+				}
 			}
 			lines = append(lines, newline)
 		} else {
@@ -81,10 +85,11 @@ func readAndDelete(path string) {
 		_, _ = newFile.WriteString(line + "\n")
 	}
 	_, _ = newFile.WriteString(fmt.Sprintf("service %s-api {\n", service))
+	_, _ = blue.Println(serviceList)
 	for _, v := range serviceList {
 		_, _ = newFile.WriteString(fmt.Sprintf("\t@doc \"%s\"\n", cacheServiceMap[v]))
 		_, _ = newFile.WriteString(fmt.Sprintf("\t@handler %s\n", v))
-		_, _ = newFile.WriteString(fmt.Sprintf("\tpost /%s/%s/%s (%s) returns (%s)\n", service, group, xstring.ToLowerFisrt(v), v+"Req", v+"Resp"))
+		_, _ = newFile.WriteString(fmt.Sprintf("\tpost /%s/%s/%s (%s) returns (%s)\n", service, group, toLowerFisrt(v), v+"Req", v+"Resp"))
 		_, _ = newFile.WriteString("\n")
 	}
 	_, _ = newFile.WriteString("}")
@@ -100,4 +105,10 @@ func readAndDelete(path string) {
 		fmt.Println("替换旧文件时出现错误:", err)
 		return
 	}
+}
+
+func toLowerFisrt(s string) string {
+	first := s[0]
+	First := strings.ToLower(string(first))
+	return First + s[1:]
 }

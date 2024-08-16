@@ -52,7 +52,7 @@ func main() {
 		_, _ = red.Println(err)
 		return
 	}
-	req.Header.Add("Cookie", "_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE3MTA2NjY4NTEsImV4cCI6MTcxMTI3MTY1MX0.9MnOY5jGBREWI7bGC6yXpuJkpk_XJsKL0Kq0nM0h6FM; _yapi_uid=23")
+	req.Header.Add("Cookie", "_yapi_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE3MjM2ODkzNzksImV4cCI6MTcyNDI5NDE3OX0.0SHC38CmJQrYAp-l12b_R0cCgcnRpN4zU54Df3ednPU; _yapi_uid=23")
 
 	res, err := client.Do(req)
 	if err != nil {
@@ -84,6 +84,7 @@ func main() {
 		param += "、"
 	}
 	var content string
+	response.Data.Title = strings.ReplaceAll(response.Data.Title, "\"", "'")
 	content = fmt.Sprintf("%s - %s(%s) - 请求参数: %s 返回参数详见文档", apiUrl, response.Data.Title, response.Data.Path, param)
 	_, _ = blue.Println(content)
 	_, _ = green.Println("done!")

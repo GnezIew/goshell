@@ -1,4 +1,4 @@
-package xsql
+package storage
 
 import (
 	"bufio"

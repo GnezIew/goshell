@@ -6,6 +6,7 @@ apiName=$1.api
 current_dir="$( pwd )"
 
 apiPath=$current_dir/doc/$apiName
+echo $apiPath
 
 go run /Users/backend001/go/src/goshell/tool/apigen/apigen.go -path=$apiPath
 

@@ -1,0 +1,2447 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/question/bank/addAndEditBank": {
+      "post": {
+        "summary": "\"新增或编辑题库\"",
+        "operationId": "AddAndEditBank",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/AddAndEditBankResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddAndEditBankReq"
+            }
+          }
+        ],
+        "tags": [
+          "bank"
+        ]
+      }
+    },
+    "/question/bank/deleteQuestionBank": {
+      "post": {
+        "summary": "\"删除题库\"",
+        "operationId": "DeleteQuestionBank",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/DeleteQuestionBankResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteQuestionBankReq"
+            }
+          }
+        ],
+        "tags": [
+          "bank"
+        ]
+      }
+    },
+    "/question/bank/getBankTypeList": {
+      "post": {
+        "summary": "\"获取题库话题和类别列表\"",
+        "operationId": "GetBankTypeList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetBankTypeListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetBankTypeListReq"
+            }
+          }
+        ],
+        "tags": [
+          "bank"
+        ]
+      }
+    },
+    "/question/bank/getQuestionBankList": {
+      "post": {
+        "summary": "\"获取题库列表\"",
+        "operationId": "GetQuestionBankList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetQuestionBankListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetQuestionBankListReq"
+            }
+          }
+        ],
+        "tags": [
+          "bank"
+        ]
+      }
+    },
+    "/question/bank/testGetQuestionBankList": {
+      "post": {
+        "summary": "\"获取题库列表\"",
+        "operationId": "TestGetQuestionBankList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/TestGetQuestionBankListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetQuestionBankListReq"
+            }
+          }
+        ],
+        "tags": [
+          "bank"
+        ]
+      }
+    },
+    "/question/paper/checkStuSubmittedPaper": {
+      "post": {
+        "summary": "\"查看学生已提交的试卷详情\"",
+        "operationId": "CheckStuSubmittedPaper",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CheckStuSubmittedPaperResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CheckStuSubmittedPaperReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/createPaper": {
+      "post": {
+        "summary": "\"创建试卷\"",
+        "operationId": "CreatePaper",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CreatePaperResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreatePaperReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/getAnswerPaperDetail": {
+      "post": {
+        "summary": "\"查看有答案的试卷\"",
+        "operationId": "GetAnswerPaperDetail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetAnswerPaperDetailResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetAnswerPaperDetailReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/getNotAnswerPaperDetail": {
+      "post": {
+        "summary": "\"查看没有答案的试卷\"",
+        "operationId": "GetNotAnswerPaperDetail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetNotAnswerPaperDetailResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetNotAnswerPaperDetailReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/getPaperListIdentity": {
+      "post": {
+        "summary": "\"获取试卷相关列表\"",
+        "operationId": "GetPaperListByIdentity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetPaperListByIdentityResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetPaperListByIdentityReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/getStuSubmitted": {
+      "post": {
+        "summary": "\"查看已提交试卷的做题内容\"",
+        "operationId": "GetStuSubmitted",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetStuSubmittedResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetStuSubmittedReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/paper/submitOrEditPaper": {
+      "post": {
+        "summary": "\"提交试卷或修改试卷\"",
+        "operationId": "SubmitOrEditPaper",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SubmitOrEditPaperResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SubmitOrEditPaperReq"
+            }
+          }
+        ],
+        "tags": [
+          "paper"
+        ]
+      }
+    },
+    "/question/problem/addOrEditQuestionProblem": {
+      "post": {
+        "summary": "\"新增或编辑大题小题及选项\"",
+        "operationId": "AddOrEditQuestionProblem",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/AddOrEditQuestionProblemResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddOrEditQuestionProblemReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/problem/deleteProblem": {
+      "post": {
+        "summary": "\"删除大题\"",
+        "operationId": "DeleteProblem",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/DeleteProblemResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeleteProblemReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/problem/getAssignProblemList": {
+      "post": {
+        "summary": "\"获取指定大题的列表\"",
+        "operationId": "GetAssignProblemList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetAssignProblemListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetAssignProblemListReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/problem/getProblemList": {
+      "post": {
+        "summary": "\"大题列表\"",
+        "operationId": "GetProblemList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetProblemListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetProblemListReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/problem/getQuestionProblemDetail": {
+      "post": {
+        "summary": "\"获取大题详情\"",
+        "operationId": "GetQuestionProblemDetail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetQuestionProblemDetailResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetQuestionProblemDetailReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/problem/getRandProblemList": {
+      "post": {
+        "summary": "\"随机获取三道答题列表数据\"",
+        "operationId": "GetRandProblemList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetRandProblemListResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetRandProblemListReq"
+            }
+          }
+        ],
+        "tags": [
+          "problem"
+        ]
+      }
+    },
+    "/question/user/createThreeUser": {
+      "post": {
+        "summary": "\"创建三个身份的用户\"",
+        "operationId": "CreateThreeUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CreateThreeUserResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateThreeUserReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/question/user/diffIdentityLogin": {
+      "post": {
+        "summary": "\"不同身份登陆\"",
+        "operationId": "DiffIdentityLogin",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/DiffIdentityLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DiffIdentityLoginReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/question/user/manageUserLogin": {
+      "post": {
+        "summary": "\"后台管理登陆\"",
+        "operationId": "ManageUserLogin",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ManageUserLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ManageUserLoginReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/question/user/updateUserNameByIdentity": {
+      "post": {
+        "summary": "\"修改用户名称\"",
+        "operationId": "UpdateUserNameByIdentity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UpdateUserNameByIdentityResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateUserNameByIdentityReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AddAndEditBankReq": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id 传空表示新增 有值表示编辑"
+        },
+        "questionBankName": {
+          "type": "string",
+          "description": " 题库名称"
+        }
+      },
+      "title": "AddAndEditBankReq",
+      "required": [
+        "questionBankName"
+      ]
+    },
+    "AddAndEditBankResp": {
+      "type": "object",
+      "title": "AddAndEditBankResp"
+    },
+    "AddOrEditQuestionProblemReq": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id 传空表示新增 有值表示编辑"
+        },
+        "questionBankId": {
+          "type": "string",
+          "description": " 所属题库的id"
+        },
+        "questionTopicId": {
+          "type": "string",
+          "description": " 话题id"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionWriter": {
+          "type": "string",
+          "description": " 出题老师"
+        },
+        "problemTitle": {
+          "type": "string",
+          "description": " 题目标题"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "recordContent": {
+          "type": "string",
+          "description": " 录音文稿"
+        },
+        "recordContentPinyin": {
+          "type": "string",
+          "description": " 录音文稿拼音"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0 否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionSmallProblemListData"
+          },
+          "description": " 小题列表"
+        },
+        "deleteSmallProblemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " 删除的小题列表"
+        }
+      },
+      "title": "AddOrEditQuestionProblemReq",
+      "required": [
+        "questionBankId",
+        "questionTopicId",
+        "questionClassesId",
+        "questionWriter",
+        "problemTitle",
+        "problemDescription",
+        "recordContent",
+        "questionSmallProblemList"
+      ]
+    },
+    "AddOrEditQuestionProblemResp": {
+      "type": "object",
+      "title": "AddOrEditQuestionProblemResp"
+    },
+    "CheckStuSubmittedPaperData": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubmittedSmallProblemListData"
+          },
+          "description": " 小题列表"
+        }
+      },
+      "title": "CheckStuSubmittedPaperData",
+      "required": [
+        "questionProblemId",
+        "questionClassesId",
+        "questionClassesName",
+        "problemDescription",
+        "problemDescriptionPinyin",
+        "problemAudioUrl",
+        "problemImageUrl",
+        "isShowPinyin",
+        "questionSmallProblemList"
+      ]
+    },
+    "CheckStuSubmittedPaperReq": {
+      "type": "object",
+      "properties": {
+        "paperSubmitId": {
+          "type": "string",
+          "description": " 提交id"
+        }
+      },
+      "title": "CheckStuSubmittedPaperReq",
+      "required": [
+        "paperSubmitId"
+      ]
+    },
+    "CheckStuSubmittedPaperResp": {
+      "type": "object",
+      "properties": {
+        "paperName": {
+          "type": "string"
+        },
+        "questionStudentId": {
+          "type": "string",
+          "description": " 做题人的id"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 试卷的分数"
+        },
+        "questionStudentName": {
+          "type": "string",
+          "description": " 学生名称"
+        },
+        "problemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CheckStuSubmittedPaperData"
+          }
+        }
+      },
+      "title": "CheckStuSubmittedPaperResp",
+      "required": [
+        "paperName",
+        "questionStudentId",
+        "score",
+        "questionStudentName",
+        "problemList"
+      ]
+    },
+    "CreatePaperReq": {
+      "type": "object",
+      "properties": {
+        "paperName": {
+          "type": "string",
+          "description": " 试卷名称"
+        },
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id"
+        },
+        "createPaperUid": {
+          "type": "string",
+          "description": " 创建人"
+        },
+        "createPaperIdentity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 创建人身份 0 老师 1 学生"
+        },
+        "questionProblemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " 大题id列表"
+        }
+      },
+      "title": "CreatePaperReq",
+      "required": [
+        "paperName",
+        "questionBankId",
+        "createPaperUid",
+        "createPaperIdentity",
+        "questionProblemIds"
+      ]
+    },
+    "CreatePaperResp": {
+      "type": "object",
+      "properties": {
+        "paperId": {
+          "type": "string"
+        }
+      },
+      "title": "CreatePaperResp",
+      "required": [
+        "paperId"
+      ]
+    },
+    "CreateThreeUserReq": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "createType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 默认 0 三端都创建、 1 仅后台 2 仅老师 3 仅学生"
+        }
+      },
+      "title": "CreateThreeUserReq",
+      "required": [
+        "account",
+        "password"
+      ]
+    },
+    "CreateThreeUserResp": {
+      "type": "object",
+      "title": "CreateThreeUserResp"
+    },
+    "DeleteProblemReq": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id"
+        }
+      },
+      "title": "DeleteProblemReq",
+      "required": [
+        "questionProblemId"
+      ]
+    },
+    "DeleteProblemResp": {
+      "type": "object",
+      "title": "DeleteProblemResp"
+    },
+    "DeleteQuestionBankReq": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id 传空表示新增 有值表示编辑"
+        }
+      },
+      "title": "DeleteQuestionBankReq",
+      "required": [
+        "questionBankId"
+      ]
+    },
+    "DeleteQuestionBankResp": {
+      "type": "object",
+      "title": "DeleteQuestionBankResp"
+    },
+    "DiffIdentityLoginReq": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "identity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 0 老师 / 1 学生"
+        }
+      },
+      "title": "DiffIdentityLoginReq",
+      "required": [
+        "account",
+        "password",
+        "identity"
+      ]
+    },
+    "DiffIdentityLoginResp": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户id"
+        },
+        "accountName": {
+          "type": "string",
+          "description": " 账号名称"
+        },
+        "accessToken": {
+          "type": "string"
+        }
+      },
+      "title": "DiffIdentityLoginResp",
+      "required": [
+        "userId",
+        "accountName",
+        "accessToken"
+      ]
+    },
+    "GetAnswerPaperDetailData": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SmallProblemListData"
+          },
+          "description": " 小题列表"
+        }
+      },
+      "title": "GetAnswerPaperDetailData",
+      "required": [
+        "questionProblemId",
+        "questionClassesId",
+        "questionClassesName",
+        "problemDescription",
+        "problemDescriptionPinyin",
+        "problemAudioUrl",
+        "problemImageUrl",
+        "isShowPinyin",
+        "questionSmallProblemList"
+      ]
+    },
+    "GetAnswerPaperDetailReq": {
+      "type": "object",
+      "properties": {
+        "paperId": {
+          "type": "string"
+        }
+      },
+      "title": "GetAnswerPaperDetailReq",
+      "required": [
+        "paperId"
+      ]
+    },
+    "GetAnswerPaperDetailResp": {
+      "type": "object",
+      "properties": {
+        "paperName": {
+          "type": "string"
+        },
+        "problemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetAnswerPaperDetailData"
+          }
+        }
+      },
+      "title": "GetAnswerPaperDetailResp",
+      "required": [
+        "paperName",
+        "problemList"
+      ]
+    },
+    "GetAssignProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionSmallProblemListData"
+          },
+          "description": " 小题列表"
+        }
+      },
+      "title": "GetAssignProblemListData",
+      "required": [
+        "questionProblemId",
+        "questionClassesId",
+        "questionClassesName",
+        "problemDescription",
+        "problemDescriptionPinyin",
+        "problemAudioUrl",
+        "problemImageUrl",
+        "isShowPinyin",
+        "questionSmallProblemList"
+      ]
+    },
+    "GetAssignProblemListReq": {
+      "type": "object",
+      "properties": {
+        "questionProblemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " 大题id列表"
+        }
+      },
+      "title": "GetAssignProblemListReq",
+      "required": [
+        "questionProblemIds"
+      ]
+    },
+    "GetAssignProblemListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetAssignProblemListData"
+          },
+          "description": " 大题列表数据"
+        }
+      },
+      "title": "GetAssignProblemListResp",
+      "required": [
+        "list"
+      ]
+    },
+    "GetBankTypeListData": {
+      "type": "object",
+      "properties": {
+        "questionBankTypeId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionBankType": {
+          "type": "string",
+          "description": " 题库类别： 1、话题 2、 类别"
+        },
+        "typeName": {
+          "type": "string",
+          "description": " 类别名称"
+        }
+      },
+      "title": "GetBankTypeListData",
+      "required": [
+        "questionBankTypeId",
+        "questionBankType",
+        "typeName"
+      ]
+    },
+    "GetBankTypeListReq": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id"
+        }
+      },
+      "title": "GetBankTypeListReq",
+      "required": [
+        "questionBankId"
+      ]
+    },
+    "GetBankTypeListResp": {
+      "type": "object",
+      "properties": {
+        "topicList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetBankTypeListData"
+          },
+          "description": " 话题列表"
+        },
+        "classesList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetBankTypeListData"
+          },
+          "description": " 类别列表"
+        }
+      },
+      "title": "GetBankTypeListResp",
+      "required": [
+        "topicList",
+        "classesList"
+      ]
+    },
+    "GetNotAnswerPaperDetailData": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NotAnsSmallProblemListData"
+          }
+        }
+      },
+      "title": "GetNotAnswerPaperDetailData",
+      "required": [
+        "questionProblemId",
+        "questionClassesId",
+        "questionClassesName",
+        "problemDescription",
+        "problemDescriptionPinyin",
+        "problemAudioUrl",
+        "problemImageUrl",
+        "isShowPinyin",
+        "questionSmallProblemList"
+      ]
+    },
+    "GetNotAnswerPaperDetailReq": {
+      "type": "object",
+      "properties": {
+        "paperId": {
+          "type": "string"
+        }
+      },
+      "title": "GetNotAnswerPaperDetailReq",
+      "required": [
+        "paperId"
+      ]
+    },
+    "GetNotAnswerPaperDetailResp": {
+      "type": "object",
+      "properties": {
+        "paperName": {
+          "type": "string"
+        },
+        "problemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetNotAnswerPaperDetailData"
+          }
+        }
+      },
+      "title": "GetNotAnswerPaperDetailResp",
+      "required": [
+        "paperName",
+        "problemList"
+      ]
+    },
+    "GetPaperListByIdentityData": {
+      "type": "object",
+      "properties": {
+        "questionPaperId": {
+          "type": "string",
+          "description": " 试卷id"
+        },
+        "paperSubmitId": {
+          "type": "string",
+          "description": " 提交的试卷id"
+        },
+        "paperAnswerName": {
+          "type": "string",
+          "description": " 答题人"
+        },
+        "answerTime": {
+          "type": "string",
+          "description": " 答题时间"
+        },
+        "paperName": {
+          "type": "string",
+          "description": " 试卷名称"
+        },
+        "paperTeacherName": {
+          "type": "string",
+          "description": " 出卷人"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 成绩"
+        }
+      },
+      "title": "GetPaperListByIdentityData",
+      "required": [
+        "questionPaperId",
+        "paperSubmitId",
+        "paperAnswerName",
+        "answerTime",
+        "paperName",
+        "paperTeacherName",
+        "score"
+      ]
+    },
+    "GetPaperListByIdentityReq": {
+      "type": "object",
+      "properties": {
+        "queryUser": {
+          "type": "string",
+          "default": "teacher",
+          "description": " 查询对象默认是老师 teacher 、 student 学生"
+        },
+        "queryUserId": {
+          "type": "string",
+          "description": " 用户id"
+        },
+        "queryType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 0 全部  1 学生已答的 2 学生未答的"
+        },
+        "pageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "default": "1",
+          "description": " 第几页"
+        },
+        "perPageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "default": "20",
+          "description": " 每页多少条"
+        }
+      },
+      "title": "GetPaperListByIdentityReq",
+      "required": [
+        "queryUser",
+        "queryUserId",
+        "pageNumber",
+        "perPageNumber"
+      ]
+    },
+    "GetPaperListByIdentityResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetPaperListByIdentityData"
+          }
+        },
+        "pageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "default": "1",
+          "description": " 第几页"
+        },
+        "perPageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "default": "20",
+          "description": " 每页多少条"
+        },
+        "totalPageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总页数"
+        },
+        "totalNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总条数"
+        }
+      },
+      "title": "GetPaperListByIdentityResp",
+      "required": [
+        "list",
+        "pageNumber",
+        "perPageNumber",
+        "totalPageNumber",
+        "totalNumber"
+      ]
+    },
+    "GetProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id"
+        },
+        "questionBankId": {
+          "type": "string",
+          "description": " 所属题库的id"
+        },
+        "questionTopicId": {
+          "type": "string",
+          "description": " 话题id"
+        },
+        "questionTopicName": {
+          "type": "string",
+          "description": " 话题名称"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "problemTitle": {
+          "type": "string",
+          "description": " 题目标题"
+        },
+        "recordContent": {
+          "type": "string",
+          "description": " 录音文稿"
+        },
+        "smallProbleNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 小题总数"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总分数"
+        }
+      },
+      "title": "GetProblemListData",
+      "required": [
+        "questionProblemId",
+        "questionBankId",
+        "questionTopicId",
+        "questionTopicName",
+        "questionClassesId",
+        "questionClassesName",
+        "problemTitle",
+        "recordContent",
+        "smallProbleNumber",
+        "score"
+      ]
+    },
+    "GetProblemListReq": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id"
+        },
+        "topicId": {
+          "type": "string",
+          "description": " 话题id"
+        },
+        "classesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "search": {
+          "type": "string",
+          "description": " 模糊搜索"
+        },
+        "pageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "default": "1",
+          "description": " 第几页"
+        },
+        "perPage": {
+          "type": "integer",
+          "format": "int64",
+          "default": "20",
+          "description": " 每页多少条"
+        }
+      },
+      "title": "GetProblemListReq",
+      "required": [
+        "questionBankId",
+        "pageNumber",
+        "perPage"
+      ]
+    },
+    "GetProblemListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetProblemListData"
+          }
+        },
+        "pageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 第几页"
+        },
+        "perPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 每页多少条"
+        },
+        "totalNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总条数"
+        },
+        "totalPageNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总页数"
+        }
+      },
+      "title": "GetProblemListResp",
+      "required": [
+        "list",
+        "pageNumber",
+        "perPage",
+        "totalNumber",
+        "totalPageNumber"
+      ]
+    },
+    "GetQuestionBankListData": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string",
+          "description": " 题库id"
+        },
+        "questionBankName": {
+          "type": "string",
+          "description": " 题库名称"
+        },
+        "questionProblemNumber": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 题目数量"
+        },
+        "questionBankImage": {
+          "type": "string",
+          "description": " 题库背景图"
+        }
+      },
+      "title": "GetQuestionBankListData",
+      "required": [
+        "questionBankId",
+        "questionBankName",
+        "questionProblemNumber",
+        "questionBankImage"
+      ]
+    },
+    "GetQuestionBankListReq": {
+      "type": "object",
+      "title": "GetQuestionBankListReq"
+    },
+    "GetQuestionBankListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetQuestionBankListData"
+          }
+        }
+      },
+      "title": "GetQuestionBankListResp",
+      "required": [
+        "list"
+      ]
+    },
+    "GetQuestionProblemDetailReq": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id"
+        }
+      },
+      "title": "GetQuestionProblemDetailReq",
+      "required": [
+        "questionProblemId"
+      ]
+    },
+    "GetQuestionProblemDetailResp": {
+      "type": "object",
+      "properties": {
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id"
+        },
+        "questionBankId": {
+          "type": "string",
+          "description": " 所属题库的id"
+        },
+        "questionTopicId": {
+          "type": "string",
+          "description": " 话题id"
+        },
+        "questionTopicName": {
+          "type": "string",
+          "description": " 话题名称"
+        },
+        "questionClassesId": {
+          "type": "string",
+          "description": " 类别id"
+        },
+        "questionClassesName": {
+          "type": "string",
+          "description": " 类别名称"
+        },
+        "questionWriter": {
+          "type": "string",
+          "description": " 出题老师"
+        },
+        "problemTitle": {
+          "type": "string",
+          "description": " 题目标题"
+        },
+        "problemDescription": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "problemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目说明拼音"
+        },
+        "problemAudioUrl": {
+          "type": "string",
+          "description": " 音频文件地址"
+        },
+        "problemImageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "recordContent": {
+          "type": "string",
+          "description": " 录音文稿"
+        },
+        "recordContentPinyin": {
+          "type": "string",
+          "description": " 录音文稿拼音"
+        },
+        "isShowPinyin": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否展示拼音 0 否 1是"
+        },
+        "questionSmallProblemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionSmallProblemListData"
+          },
+          "description": " 小题列表"
+        }
+      },
+      "title": "GetQuestionProblemDetailResp",
+      "required": [
+        "questionProblemId",
+        "questionBankId",
+        "questionTopicId",
+        "questionTopicName",
+        "questionClassesId",
+        "questionClassesName",
+        "questionWriter",
+        "problemTitle",
+        "problemDescription",
+        "recordContent",
+        "isShowPinyin",
+        "questionSmallProblemList"
+      ]
+    },
+    "GetRandProblemListReq": {
+      "type": "object",
+      "properties": {
+        "questionBankId": {
+          "type": "string"
+        }
+      },
+      "title": "GetRandProblemListReq",
+      "required": [
+        "questionBankId"
+      ]
+    },
+    "GetRandProblemListResp": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetProblemListData"
+          }
+        }
+      },
+      "title": "GetRandProblemListResp",
+      "required": [
+        "list"
+      ]
+    },
+    "GetStuSubmittedReq": {
+      "type": "object",
+      "properties": {
+        "paperSubmitId": {
+          "type": "string",
+          "description": " 提交试卷的id"
+        }
+      },
+      "title": "GetStuSubmittedReq",
+      "required": [
+        "paperSubmitId"
+      ]
+    },
+    "GetStuSubmittedResp": {
+      "type": "object",
+      "properties": {
+        "paperSubmitId": {
+          "type": "string",
+          "description": " 提交id 传空为新增 有值为编辑"
+        },
+        "questionPaperId": {
+          "type": "string",
+          "description": " 试卷id"
+        },
+        "questionStudentId": {
+          "type": "string",
+          "description": " 做题人的id"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 试卷的分数"
+        },
+        "questionStudentName": {
+          "type": "string",
+          "description": " 学生名称"
+        },
+        "submitList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubmitListData"
+          },
+          "description": " 用户提交的做题内容"
+        }
+      },
+      "title": "GetStuSubmittedResp",
+      "required": [
+        "questionPaperId",
+        "questionStudentId",
+        "score",
+        "questionStudentName",
+        "submitList"
+      ]
+    },
+    "ManageUserLoginReq": {
+      "type": "object",
+      "properties": {
+        "manageAccount": {
+          "type": "string",
+          "description": " 账号"
+        },
+        "managePassword": {
+          "type": "string",
+          "description": " 密码"
+        }
+      },
+      "title": "ManageUserLoginReq",
+      "required": [
+        "manageAccount",
+        "managePassword"
+      ]
+    },
+    "ManageUserLoginResp": {
+      "type": "object",
+      "properties": {
+        "manageId": {
+          "type": "string"
+        },
+        "manageAccountName": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        }
+      },
+      "title": "ManageUserLoginResp",
+      "required": [
+        "manageId",
+        "manageAccountName",
+        "accessToken"
+      ]
+    },
+    "NotAnsOptionListData": {
+      "type": "object",
+      "properties": {
+        "problemOptionId": {
+          "type": "string",
+          "description": " 选项id  传空表示新增 有值表示编辑"
+        },
+        "optionName": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字"
+        },
+        "optionNamePinyin": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字 的拼音"
+        },
+        "optionAudioUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的音频地址"
+        },
+        "optionImageUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的图片地址"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 分数"
+        }
+      },
+      "title": "NotAnsOptionListData",
+      "required": [
+        "optionName"
+      ]
+    },
+    "NotAnsSmallProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionSmallProblemId": {
+          "type": "string",
+          "description": " 小题id 传空表示新增 有值表示编辑"
+        },
+        "title": {
+          "type": "string",
+          "description": " 小题题目标题"
+        },
+        "titlePinyin": {
+          "type": "string",
+          "description": " 小题题目标题拼音"
+        },
+        "smallProblemType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 题目类型： 1、单选题 2、多选题 3、匹配勾选题 4、填空题 5、简单题 6、判断题"
+        },
+        "smallProblemDescription": {
+          "type": "string",
+          "description": " 题目文本 目前只有填空题 传值"
+        },
+        "smallProblemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目文本拼音"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总分数"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "  音频文件地址"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "questionOptionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NotAnsOptionListData"
+          },
+          "description": " 小题选项列表"
+        },
+        "questionMatchList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NotAnsOptionListData"
+          },
+          "description": " 匹配勾选题中的 匹配项列表"
+        }
+      },
+      "title": "NotAnsSmallProblemListData",
+      "required": [
+        "title",
+        "titlePinyin",
+        "smallProblemType",
+        "score",
+        "imageUrl",
+        "questionOptionList"
+      ]
+    },
+    "OptionListData": {
+      "type": "object",
+      "properties": {
+        "problemOptionId": {
+          "type": "string",
+          "description": " 选项id  传空表示新增 有值表示编辑"
+        },
+        "optionName": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字"
+        },
+        "optionNamePinyin": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字 的拼音"
+        },
+        "optionAudioUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的音频地址"
+        },
+        "optionImageUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的图片地址"
+        },
+        "isRightAnswer": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否是正确答案 0 否 1是 （用于单选 多选 判断）"
+        },
+        "optionMatchId": {
+          "type": "string",
+          "description": " 匹配项id（主要用于匹配勾选项，前端自生成）"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 分数"
+        }
+      },
+      "title": "OptionListData",
+      "required": [
+        "optionName",
+        "isRightAnswer"
+      ]
+    },
+    "QuestionOptionListData": {
+      "type": "object",
+      "properties": {
+        "problemOptionId": {
+          "type": "string",
+          "description": " 选项id  传空表示新增 有值表示编辑"
+        },
+        "optionName": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字"
+        },
+        "optionNamePinyin": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字 的拼音"
+        },
+        "optionAudioUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的音频地址"
+        },
+        "optionImageUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的图片地址"
+        },
+        "isRightAnswer": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否是正确答案 0 否 1是 （用于单选 多选 判断）"
+        },
+        "optionMatchId": {
+          "type": "string",
+          "description": " 匹配项id（主要用于匹配勾选项，前端自生成）"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 分数"
+        }
+      },
+      "title": "QuestionOptionListData",
+      "required": [
+        "optionName",
+        "isRightAnswer"
+      ]
+    },
+    "QuestionSmallProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionSmallProblemId": {
+          "type": "string",
+          "description": " 小题id 传空表示新增 有值表示编辑"
+        },
+        "title": {
+          "type": "string",
+          "description": " 小题题目标题"
+        },
+        "titlePinyin": {
+          "type": "string",
+          "description": " 小题题目标题拼音"
+        },
+        "smallProblemDefinition": {
+          "type": "string",
+          "description": " 题目说明"
+        },
+        "smallProblemDefinitionPinyin": {
+          "type": "string"
+        },
+        "smallProblemType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 题目类型： 1、单选题 2、多选题 3、匹配勾选题 4、填空题 5、简单题 6、判断题"
+        },
+        "smallProblemDescription": {
+          "type": "string",
+          "description": " 题目文本 目前只有填空题 传值"
+        },
+        "smallProblemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目文本拼音"
+        },
+        "smallProblemAnalysis": {
+          "type": "string",
+          "description": " 题目解析说明"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总分数"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "  音频文件地址"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "tableDescription": {
+          "type": "string",
+          "description": " 表头文字"
+        },
+        "tableDescriptionPinyin": {
+          "type": "string",
+          "description": " 表头文字拼音"
+        },
+        "questionOptionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionOptionListData"
+          },
+          "description": " 小题选项列表"
+        },
+        "questionMatchList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QuestionOptionListData"
+          },
+          "description": " 匹配勾选题中的 匹配项列表"
+        },
+        "deleteOptionIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": " 删除的选项id"
+        }
+      },
+      "title": "QuestionSmallProblemListData",
+      "required": [
+        "title",
+        "titlePinyin",
+        "smallProblemDefinition",
+        "smallProblemDefinitionPinyin",
+        "smallProblemType",
+        "score",
+        "imageUrl",
+        "tableDescription",
+        "tableDescriptionPinyin",
+        "questionOptionList"
+      ]
+    },
+    "SmallProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionSmallProblemId": {
+          "type": "string",
+          "description": " 小题id 传空表示新增 有值表示编辑"
+        },
+        "title": {
+          "type": "string",
+          "description": " 小题题目标题"
+        },
+        "titlePinyin": {
+          "type": "string",
+          "description": " 小题题目标题拼音"
+        },
+        "smallProblemType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 题目类型： 1、单选题 2、多选题 3、匹配勾选题 4、填空题 5、简单题 6、判断题"
+        },
+        "smallProblemDescription": {
+          "type": "string",
+          "description": " 题目文本 目前只有填空题 传值"
+        },
+        "smallProblemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目文本拼音"
+        },
+        "smallProblemAnalysis": {
+          "type": "string",
+          "description": " 题目解析说明"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总分数"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "  音频文件地址"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "questionOptionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OptionListData"
+          },
+          "description": " 小题选项列表"
+        },
+        "questionMatchList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OptionListData"
+          },
+          "description": " 匹配勾选题中的 匹配项列表"
+        }
+      },
+      "title": "SmallProblemListData",
+      "required": [
+        "title",
+        "titlePinyin",
+        "smallProblemType",
+        "score",
+        "imageUrl",
+        "questionOptionList"
+      ]
+    },
+    "SubmitListData": {
+      "type": "object",
+      "properties": {
+        "submitProblemId": {
+          "type": "string",
+          "description": " 答题id 传空为新增 有值为编辑"
+        },
+        "questionProblemId": {
+          "type": "string",
+          "description": " 大题id"
+        },
+        "questionSmallProblemId": {
+          "type": "string",
+          "description": " 小题id"
+        },
+        "questionOptionId": {
+          "type": "string",
+          "description": " 用户选择的选项id(可能正确可能错误) 这个是必传的"
+        },
+        "questionOptionAnswer": {
+          "type": "string",
+          "description": " 用户答题，适用于简答题、填空题"
+        },
+        "questionMatchId": {
+          "type": "string",
+          "description": " 用户选择的匹配项id(非前端自生成)，适用于匹配勾选题"
+        },
+        "isRightAnswer": {
+          "type": "integer",
+          "format": "int64",
+          "description": "  是否作答正确 0 否 1是"
+        }
+      },
+      "title": "SubmitListData",
+      "required": [
+        "questionProblemId",
+        "questionSmallProblemId",
+        "questionOptionId"
+      ]
+    },
+    "SubmitOrEditPaperReq": {
+      "type": "object",
+      "properties": {
+        "paperSubmitId": {
+          "type": "string",
+          "description": " 提交id 传空为新增 有值为编辑"
+        },
+        "questionPaperId": {
+          "type": "string",
+          "description": " 试卷id"
+        },
+        "questionStudentId": {
+          "type": "string",
+          "description": " 做题人的id"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 试卷的分数"
+        },
+        "submitList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubmitListData"
+          }
+        }
+      },
+      "title": "SubmitOrEditPaperReq",
+      "required": [
+        "questionPaperId",
+        "questionStudentId",
+        "score",
+        "submitList"
+      ]
+    },
+    "SubmitOrEditPaperResp": {
+      "type": "object",
+      "title": "SubmitOrEditPaperResp"
+    },
+    "SubmittedOptionListData": {
+      "type": "object",
+      "properties": {
+        "problemOptionId": {
+          "type": "string",
+          "description": " 选项id"
+        },
+        "submitProblemId": {
+          "type": "string",
+          "description": " 答题id"
+        },
+        "optionName": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字"
+        },
+        "optionNamePinyin": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字 的拼音"
+        },
+        "optionAudioUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的音频地址"
+        },
+        "optionImageUrl": {
+          "type": "string",
+          "description": " 标准答案 or 选项文字的图片地址"
+        },
+        "isRightAnswer": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 是否是正确答案 0 否 1是 （用于单选 多选 判断）"
+        },
+        "optionMatchId": {
+          "type": "string",
+          "description": " 匹配项id（主要用于匹配勾选项，前端自生成）"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 分数"
+        },
+        "stuIsCheck": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 学生是否选择这个选项"
+        },
+        "stuWriteAnswer": {
+          "type": "string",
+          "description": " 学生写的答案"
+        },
+        "stuIsRightAnswer": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 学生作答是否正确"
+        }
+      },
+      "title": "SubmittedOptionListData",
+      "required": [
+        "problemOptionId",
+        "submitProblemId",
+        "optionName",
+        "isRightAnswer",
+        "stuIsCheck",
+        "stuWriteAnswer",
+        "stuIsRightAnswer"
+      ]
+    },
+    "SubmittedSmallProblemListData": {
+      "type": "object",
+      "properties": {
+        "questionSmallProblemId": {
+          "type": "string",
+          "description": " 小题id 传空表示新增 有值表示编辑"
+        },
+        "title": {
+          "type": "string",
+          "description": " 小题题目标题"
+        },
+        "titlePinyin": {
+          "type": "string",
+          "description": " 小题题目标题拼音"
+        },
+        "smallProblemType": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 题目类型： 1、单选题 2、多选题 3、匹配勾选题 4、填空题 5、简单题 6、判断题"
+        },
+        "smallProblemDescription": {
+          "type": "string",
+          "description": " 题目文本 目前只有填空题 传值"
+        },
+        "smallProblemDescriptionPinyin": {
+          "type": "string",
+          "description": " 题目文本拼音"
+        },
+        "smallProblemAnalysis": {
+          "type": "string",
+          "description": " 题目解析说明"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 总分数"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "  音频文件地址"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": " 图片文件地址"
+        },
+        "questionOptionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubmittedOptionListData"
+          },
+          "description": " 小题选项列表"
+        },
+        "questionMatchList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SubmittedOptionListData"
+          },
+          "description": " 匹配勾选题中的 匹配项列表"
+        }
+      },
+      "title": "SubmittedSmallProblemListData",
+      "required": [
+        "title",
+        "titlePinyin",
+        "smallProblemType",
+        "score",
+        "imageUrl",
+        "questionOptionList"
+      ]
+    },
+    "TestGetQuestionBankListResp": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        }
+      },
+      "title": "TestGetQuestionBankListResp",
+      "required": [
+        "content"
+      ]
+    },
+    "UpdateUserNameByIdentityReq": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": " 用户id"
+        },
+        "accountName": {
+          "type": "string",
+          "description": " 账号名称"
+        },
+        "identity": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 0 老师 / 1 学生 / 2管理员"
+        }
+      },
+      "title": "UpdateUserNameByIdentityReq",
+      "required": [
+        "userId",
+        "accountName",
+        "identity"
+      ]
+    },
+    "UpdateUserNameByIdentityResp": {
+      "type": "object",
+      "title": "UpdateUserNameByIdentityResp"
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}

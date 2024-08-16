@@ -1,0 +1,23 @@
+CREATE TABLE `question_small_problem` (
+                                          `id` int unsigned NOT NULL AUTO_INCREMENT,
+                                          `question_small_problem_id` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '',
+                                          `question_problem_id` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '大题表的id',
+                                          `title` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '题目标题',
+                                          `title_pinyin` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '题目标题的拼音',
+                                          `small_problem_definition` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '题目说明',
+                                          `small_problem_definition_pinyin` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '题目说明的拼音',
+                                          `small_problem_type` tinyint NOT NULL DEFAULT '1' COMMENT '题目类型： 1、单选题 2、多选题 3、匹配勾选题 4、填空题 5、简单题 6、判断题',
+                                          `small_problem_description` text COLLATE utf8mb4_bin NOT NULL COMMENT '题目描述，目前只有填空题需要',
+                                          `small_problem_description_pinyin` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '题目描述拼音',
+                                          `small_problem_analysis` text COLLATE utf8mb4_bin NOT NULL COMMENT '题目解析说明',
+                                          `score` int NOT NULL DEFAULT '0' COMMENT '分数',
+                                          `audio_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '音频文件',
+                                          `image_url` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '图片地址',
+                                          `sort` int NOT NULL DEFAULT '0',
+                                          `table_description` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '表头文字（目前仅匹配够选项）',
+                                          `table_description_pinyin` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT '',
+                                          `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                                          `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                                          PRIMARY KEY (`id`),
+                                          UNIQUE KEY `question_small_problem_id_index` (`question_small_problem_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=318 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='小题表';

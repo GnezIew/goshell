@@ -11,6 +11,7 @@ import (
 	"os"
 	"strings"
 	"testing"
+	"time"
 )
 
 func TestReadAndDeletelineV2(t *testing.T) {
@@ -145,4 +146,11 @@ func SSHWrite() {
 func StringFunction() {
 	waitReplace := "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"organizationId\": {\n      \"type\": \"string\",\n      \"description\": \" 机构id\"\n    },\n    \"moduleId\": {\n      \"type\": \"string\",\n      \"description\": \" 模块id 模块id为空表示新增模块(自定义)\"\n    },\n    \"moduleName\": {\n      \"type\": \"string\",\n      \"description\": \" 模块名称\"\n    },\n    \"moduleWebUrl\": {\n      \"type\": \"string\",\n      \"description\": \" 模块 '更多'链接\"\n    },\n    \"contentList\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"contentId\": {\n            \"type\": \"string\",\n            \"description\": \" 内容id为空表示 新增数据 不为空表示 修改对应id数据\"\n          },\n          \"title\": {\n            \"type\": \"string\",\n            \"description\": \" 标题\"\n          },\n          \"description\": {\n            \"type\": \"string\",\n            \"description\": \" 描述\"\n          },\n          \"imageUrl\": {\n            \"type\": \"string\",\n            \"description\": \" 图片地址\"\n          },\n          \"webUrl\": {\n            \"type\": \"string\",\n            \"description\": \" 链接地址\"\n          },\n          \"subject\": {\n            \"type\": \"string\",\n            \"description\": \" 科目名称\"\n          },\n          \"categoryId\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"description\": \" 科目id\"\n          }\n        },\n        \"title\": \"EditModuleContentData\",\n        \"$$ref\": \"#/definitions/EditModuleContentData\"\n      },\n      \"description\": \" 模块对应的内容\"\n    }\n  },\n  \"title\": \"EditModuleContentReq\",\n  \"required\": [\n    \"organizationId\",\n    \"contentList\"\n  ],\n  \"$$ref\": \"#/definitions/EditModuleContentReq\"\n}"
 	fmt.Println(strings.ReplaceAll(waitReplace, "\\n", ""))
+}
+
+func TestDemo(t *testing.T) {
+	nowTime := time.Now()
+	fmt.Println(nowTime.Unix())
+	fmt.Println(nowTime.Format("2006-01-02 15:04:05"))
+	fmt.Println(nowTime.UTC().Format("2006-01-02 15:04:05"))
 }
